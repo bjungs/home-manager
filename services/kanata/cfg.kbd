@@ -12,6 +12,16 @@
   lctl    lmet lalt           spc                 ralt      left down rght
 )
 
+;; ─── new layer template  ───────────────────────────────────────────────────────────
+;; (deflayer ralt-layer
+;;   _    _    _    _     _    _    _    _    _    _    _    _    _
+;;   _    _    _    _     _    _    _    _    _    _    _    _    _    _
+;;   _    _    _    _     _    _    _    _    _    _    _    _    _    _
+;;   _    _    _    _     _    _    _    _    _    _    _    _    _
+;;   _    _    _    _     _    _    _    _    _    _    _    _    _    _
+;;   _    _    _          _                   _         _    _    _
+;; )
+
 ;; fakekeys:
 ;;   held-lalt: sustains a real lalt press independently of the physical key
 ;;   tog-alt-ed: toggles alt-ed-layer (can't call layer-toggle inside macro directly)
@@ -19,6 +29,7 @@
   held-lalt  lalt
   tog-alt-ed (layer-toggle alt-ed-layer)
 )
+
 (defalias
   ;; tap = Esc, hold = LCtrl
   ecn (tap-hold-press 100 100 esc lctl)
@@ -31,12 +42,6 @@
     (layer-while-held alt-layer)
     (on-release-fakekey held-lalt release)
   )
-
-  ;; ralt customizations
-  ralt (tap-hold 100 100 ralt (layer-while-held ralt-layer))
-
-  ;; specific key in abnt2 (ptbr) keyboard
-  pipe S-102d
 
   ;; Tab inside alt-layer (first Alt+Tab):
   ;;   1. Press and hold fake lalt (sustains Alt for the switcher)
@@ -68,7 +73,7 @@
   tab  _    _    _    _    _    _    _    _    _     _    _    _    _
   @ecn _    _    _    _    _    _    _    _    _     _    _    _
   _    _    _    _    _    _    _    _    _    _     _    _    _    _
-  _    _    @alt                _              @ralt      _    _    _
+  _    _    @alt                _              _          _    _    _
 )
 
 ;; ─── alt-layer ───────────────────────────────────────────────────────────────
@@ -80,16 +85,6 @@
   _      A-a  A-s  A-d  A-f  A-g  A-h  left down rght A-;   A-'   A-ret
   _      A-z  A-x  A-c  A-v  A-b  pgup pgdn bspc del  A-/   rsft  A-up  A-del
   _      _    _                   A-spc               _      A-left A-down A-rght
-)
-
-;; ─── right alt layer  ───────────────────────────────────────────────────────────
-(deflayer ralt-layer
-  _    _    _    _     _    _    _    _    _    _    _    _    _
-  _    _    _    _     _    _    _    _    _    _    _    _    _    _
-  _    _    _    @pipe _    _    _    _    _    _    _    _    _    _
-  _    _    _    _     _    _    _    _    _    _    _    _    _
-  _    _    _    _     _    _    _    _    _    _    _    _    _    _
-  _    _    _          _                   _         _    _    _
 )
 
 ;; ─── alt-ed-layer ────────────────────────────────────────────────────────────

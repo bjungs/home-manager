@@ -6,6 +6,23 @@
   home.username = "bjungs";
   home.homeDirectory = "/home/bjungs";
 
+  # custom xkb layout
+  xdg.configFile."xkb/symbols/br" = {
+    text = ''
+      default partial alphanumeric_keys
+
+      // We explicitly name our variant 'br-custom' inside the default 'br' file
+      xkb_symbols "br-custom" {
+          // base layout
+          include "br(abnt2)"
+          name[Group1]= "Portuguese (Brazil, Custom)";
+
+          // key overrides
+          key <AD03> { [ e, E, bar, degree ] };
+      };
+    '';
+  };
+
   home.keyboard = {
    	layout = "br";
   };
@@ -36,8 +53,8 @@
     # '')
     micro
     bat
-    zed
     fish
+    zed-editor
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
