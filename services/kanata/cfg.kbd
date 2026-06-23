@@ -32,6 +32,12 @@
     (on-release-fakekey held-lalt release)
   )
 
+  ;; ralt customizations
+  ralt (tap-hold 100 100 ralt (layer-while-held ralt-layer))
+
+  ;; specific key in abnt2 (ptbr) keyboard
+  pipe S-102d
+
   ;; Tab inside alt-layer (first Alt+Tab):
   ;;   1. Press and hold fake lalt (sustains Alt for the switcher)
   ;;   2. Toggle alt-ed-layer on
@@ -57,12 +63,12 @@
 
 ;; ─── default layer ───────────────────────────────────────────────────────────
 (deflayer default
-  caps f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12
-  grv  _    _    _    _    _    _    _    _    _    _    _    _    _
-  tab  _    _    _    _    _    _    _    _    _    _    _    _    _
-  @ecn _    _    _    _    _    _    _    _    _    _    _    ret
-  _    _    _    _    _    _    _    _    _    _    _    _    up   del
-  _    _    @alt           _                   _         left down rght
+  caps _    _    _    _    _    _    _    _    _     _    _    _
+  grv  _    _    _    _    _    _    _    _    _     _    _    _    _
+  tab  _    _    _    _    _    _    _    _    _     _    _    _    _
+  @ecn _    _    _    _    _    _    _    _    _     _    _    _
+  _    _    _    _    _    _    _    _    _    _     _    _    _    _
+  _    _    @alt                _              @ralt      _    _    _
 )
 
 ;; ─── alt-layer ───────────────────────────────────────────────────────────────
@@ -74,6 +80,16 @@
   _      A-a  A-s  A-d  A-f  A-g  A-h  left down rght A-;   A-'   A-ret
   _      A-z  A-x  A-c  A-v  A-b  pgup pgdn bspc del  A-/   rsft  A-up  A-del
   _      _    _                   A-spc               _      A-left A-down A-rght
+)
+
+;; ─── right alt layer  ───────────────────────────────────────────────────────────
+(deflayer ralt-layer
+  _    _    _    _     _    _    _    _    _    _    _    _    _
+  _    _    _    _     _    _    _    _    _    _    _    _    _    _
+  _    _    _    @pipe _    _    _    _    _    _    _    _    _    _
+  _    _    _    _     _    _    _    _    _    _    _    _    _
+  _    _    _    _     _    _    _    _    _    _    _    _    _    _
+  _    _    _          _                   _         _    _    _
 )
 
 ;; ─── alt-ed-layer ────────────────────────────────────────────────────────────
