@@ -9,6 +9,8 @@
   home.username = "bjungs";
   home.homeDirectory = "/home/bjungs";
 
+
+
   # This value determines the Home Manager release that your configuration is
   # compatible with. This helps avoid breakage when a new Home Manager release
   # introduces backwards incompatible changes.
@@ -40,14 +42,13 @@
     direnv
     devbox
 
-    # dotfiles
+    # dotfiles manager
     chezmoi
 
     # ide
     zed-editor
 
     # shell
-    fish
     starship
   ];
 
@@ -84,7 +85,8 @@
   #
   home.sessionVariables = {
     EDITOR = "zed";
-    # TERMINAL = "alacritty";
+    TERMINAL = "alacritty";
+    SHELL = "fish";
   };
 
   nixpkgs.config.allowUnfree = true;
