@@ -9,5 +9,10 @@
           starship init fish | source
           direnv hook fish | source
         '';
+
+        shellAliases = {
+          ll = "ls -lAh";
+          py = "python";
+        };
   };
 }
