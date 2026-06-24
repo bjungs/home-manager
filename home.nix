@@ -1,6 +1,9 @@
 { config, pkgs, ... }:
 
 {
+
+  targets.genericLinux.enable = true;
+
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
   home.username = "bjungs";
@@ -30,10 +33,22 @@
     # (pkgs.writeShellScriptBin "my-hello" ''
     #   echo "Hello, ${config.home.username}!"
     # '')
+
+    # essentials
     micro
     bat
-    fish
+    direnv
+    devbox
+
+    # dotfiles
+    chezmoi
+
+    # ide
     zed-editor
+
+    # shell
+    fish
+    starship
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
@@ -80,6 +95,6 @@
   imports = [
   	./programs
    	./services
-    ./keyboard.nix
+    ./xkb.nix
   ];
 }
