@@ -50,6 +50,13 @@
 
     # shell
     starship
+
+    ## dev environments
+    # js/ts
+    nodejs_24 # lts
+
+    # rust
+    rustup
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
