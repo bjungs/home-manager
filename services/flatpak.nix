@@ -1,13 +1,6 @@
 { config, pkgs, ... }:
 {
-  ## currently does not work because:
-  # error: Unable to load summary from remote flathub: While fetching https://dl.flathub.org/repo/summary.idx: [60] SSL peer certificate or SSH remote key was not OK
-  # Seems relatred to ssl CA certificates but I could not for the life of me fix it.
-  # this *can* work if we call the service manually
-  # systemctl --user start
-
-  # nix-flatpak
-
+  # managed by nix-flatpak
   # service must point to cacerts
   home.packages = [ pkgs.cacert ];
   systemd.user.services.flatpak-managed-install = {
