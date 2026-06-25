@@ -20,7 +20,6 @@
     bat
     chezmoi
     starship
-    zed-editor
 
     nodejs_24 # lts
     rustup

@@ -5,5 +5,6 @@
 		./fish.nix
 		./alacritty.nix
 		./direnv.nix
+		./zed.nix
 	];
 }
