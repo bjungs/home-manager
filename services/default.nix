@@ -1,7 +1,6 @@
-{ config, pkgs, ... }:
-
 {
 	imports = [
+	  ./flatpak.nix
 		./kanata
 	];
 }

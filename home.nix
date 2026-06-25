@@ -1,7 +1,6 @@
 { config, pkgs, ... }:
 
 {
-  # when not on nixos
   targets.genericLinux.enable = true;
   nixpkgs.config.allowUnfree = true;
 
@@ -42,38 +41,10 @@
     # want to update the value, then make sure to first check the Home Manager
     # release notes.
     stateVersion = "26.05"; # Please read the comment before changing.
-
-    # The home.packages option allows you to install Nix packages into your
-    # environment.
-    packages = with pkgs; [
-      # # It is sometimes useful to fine-tune packages, for example, by applying
-      # # overrides. You can do that directly here, just don't forget the
-      # # parentheses. Maybe you want to install Nerd Fonts with a limited number of
-      # # fonts?
-      # (pkgs.nerdfonts.override { fonts = [ "FantasqueSansMono" ]; })
-
-      # # You can also create simple shell scripts directly inside your
-      # # configuration. For example, this adds a command 'my-hello' to your
-      # # environment:
-      # (pkgs.writeShellScriptBin "my-hello" ''
-      #   echo "Hello, ${config.home.username}!"
-      # '')
-
-      # essentials
-      micro
-      bat
-      chezmoi
-      starship
-      zed-editor
-
-      nodejs_24 # lts
-      rustup
-      gcc
-      devbox
-    ];
   };
 
   imports = [
+    ./pkgs.nix
   	./programs
    	./services
     ./xkb.nix
