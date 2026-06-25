@@ -4,8 +4,8 @@
 
   home.packages = [ pkgs.kanata ];
 
-	systemd.user.services.kanata = {
-	  Unit = {
+  systemd.user.services.kanata = {
+    Unit = {
       Description = "Kanata Service";
     };
 
@@ -14,12 +14,11 @@
       WantedBy = [ "default.target" ];
     };
 
-		Service = {
-			Type = "simple";
-			Restart = "always";
-			RestartSec = "2s";
-
-			ExecStart = "${pkgs.kanata}/bin/kanata -c ${config.xdg.configHome}/home-manager/services/kanata/cfg.kbd";
-		};
-	};
+    Service = {
+      Type = "simple";
+      Restart = "always";
+      RestartSec = "2s";
+      ExecStart = "${pkgs.kanata}/bin/kanata -c ${config.xdg.configHome}/home-manager/services/kanata/cfg.kbd";
+    };
+  };
 }
