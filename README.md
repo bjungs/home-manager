@@ -1,18 +1,28 @@
 # Introduction
 
-Home-Manager (HM) is configured to install binaries and configure some of them through nix.
-However, some of these programs have more volatile configurations that are better maintained
-outside HM. For this purpose we use [chezmoi](https://www.chezmoi.io/).
+My custom [home-manager](https://github.com/nix-community/home-manager) (hm) configuration.
 
-## Setting up new environments
+# Pre-Requisites
 
-We need a script to install a few tools system-wide (flatpak, nix, home-manager, ...) before we can use home-manager.
++ [nix](https://github.com/nixos/nix)
+  + Home-Manager requires `nix`. Make sure it's installed with following experimental features enabled before proceeding
+    + nix-command
+    + flakes
 
-Below is a list of things that will need to be included in said script before this setup is truly portable:
+# Installation
 
-  + run `non-nixos-gpu-setup` script to support hardware-accelerated programs (e.g. alacritty)
-    ```bash
-    # the script path will be printed from home-manager output after trying to switch
-    sh sudo /nix/store/dm2yff1a9b73zr2wm289yz2cjakparcg-non-nixos-gpu/bin/non-nixos-gpu-setup
-    ```
-  + install udev stuff for kanata (see https://www.johnling.me/blog/Unix-Keyboards)
+Once `nix` is installed, run the following command to install home-manager and set up the home environment using this configuration:
+
+```bash
+nix run --extra-experimental-features "nix-command flakes" --no-write-lock-file github:nix-community/home-manager -- switch --flake "github:bjungs/home-manager"
+```
+
+# System Configuration
+
+Some programs and services configured here do require some extra system-level configuration.
+
++ Flatpak needs to be installed at system level, even though its applications will be installed at user level
++ kanata udev rules
+  + to enable Kanata to capture input devices, we need to allow it to interact with them at system-level
++ non-nixos-gpu-setup
+  + some applications require GPU support (e.g. `alacritty`), and thus access to system libraries
