@@ -26,4 +26,12 @@
     gcc
     devbox
   ];
+
+  services.flatpak.packages = [
+    "org.mozilla.firefox"
+    "com.discordapp.Discord"
+
+    # ms teams - unofficial
+    "com.github.IsmaelMartinez.teams_for_linux"
+  ];
 }
