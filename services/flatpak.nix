@@ -24,6 +24,7 @@
     packages = [
       "org.mozilla.firefox"
       "com.discordapp.Discord"
+      "com.github.IsmaelMartinez.teams_for_linux"
     ];
   };
 }
