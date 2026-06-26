@@ -1,5 +1,3 @@
-{ config, pkgs, ... }:
-
 {
   # configure custom xkb layout
   xdg.configFile."xkb/symbols/br" = {

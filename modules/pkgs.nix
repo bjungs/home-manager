@@ -25,10 +25,15 @@
     rustup
     gcc
     devbox
+
+    kubectl
   ];
 
   services.flatpak.packages = [
+    # browsers
     "org.mozilla.firefox"
+    "com.google.Chrome"
+
     "com.discordapp.Discord"
 
     # ms teams - unofficial

@@ -42,9 +42,6 @@
   };
 
   imports = [
-    ./pkgs.nix
-  	./programs
-   	./services
-    ./xkb.nix
+   	./modules
   ];
 }

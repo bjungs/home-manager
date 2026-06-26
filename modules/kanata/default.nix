@@ -1,7 +1,6 @@
 { pkgs, config, ...}:
 
 {
-
   home.packages = [ pkgs.kanata ];
 
   systemd.user.services.kanata = {
@@ -18,7 +17,7 @@
       Type = "simple";
       Restart = "always";
       RestartSec = "2s";
-      ExecStart = "${pkgs.kanata}/bin/kanata -c ${config.xdg.configHome}/home-manager/services/kanata/cfg.kbd";
+      ExecStart = "${pkgs.kanata}/bin/kanata -c ${config.xdg.configHome}/home-manager/modules/kanata/cfg.kbd";
     };
   };
 }

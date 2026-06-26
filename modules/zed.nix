@@ -3,8 +3,8 @@
   home.packages = with pkgs; [
     zed-editor
 
-    # language server for Nix
-    nil
-    nixd
+    # language servers
+    nil  # nix
+    nixd # nix
   ];
 }
