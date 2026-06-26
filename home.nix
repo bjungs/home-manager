@@ -1,5 +1,3 @@
-{ config, pkgs, ... }:
-
 {
   targets.genericLinux.enable = true;
   nixpkgs.config.allowUnfree = true;
