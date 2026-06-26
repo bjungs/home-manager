@@ -29,7 +29,6 @@
     sessionVariables = {
       EDITOR = "zeditor";
       TERMINAL = "alacritty";
-      SHELL = "fish";
     };
 
     packages = with pkgs; [
