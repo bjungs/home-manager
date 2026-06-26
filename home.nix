@@ -1,3 +1,4 @@
+{ pkgs, ... }:
 {
   targets.genericLinux.enable = true;
   nixpkgs.config.allowUnfree = true;
@@ -9,9 +10,9 @@
     username = "bjungs";
     homeDirectory = "/home/bjungs";
 
-    # Home Manager can also manage your environment variables through
-    # 'home.sessionVariables'. These will be explicitly sourced when using a
-    # shell provided by Home Manager. If you don't want to manage your shell
+    # These will be explicitly sourced when using a
+    # shell provided by Home Manager.
+    # If you don't want to manage your shell
     # through Home Manager then you have to manually source 'hm-session-vars.sh'
     # located at either
     #
@@ -26,10 +27,17 @@
     #  /etc/profiles/per-user/bjungs/etc/profile.d/hm-session-vars.sh
     #
     sessionVariables = {
-      EDITOR = "zed";
+      EDITOR = "zeditor";
       TERMINAL = "alacritty";
       SHELL = "fish";
     };
+
+    packages = with pkgs; [
+      # adds an executable to PATH to open home-manager repo in $EDITOR
+      (writeShellScriptBin "hmedit" ''
+        exec $EDITOR "$HOME/.config/home-manager"
+      '')
+    ];
 
     # This value determines the Home Manager release that your configuration is
     # compatible with. This helps avoid breakage when a new Home Manager release
