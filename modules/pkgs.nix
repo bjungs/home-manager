@@ -22,8 +22,6 @@
     starship
 
     nodejs_24 # lts
-    rustup
-    gcc
     devbox
 
     kubectl
@@ -35,6 +33,7 @@
     "com.google.Chrome"
 
     "com.discordapp.Discord"
+    "md.obsidian.Obsidian"
 
     # ms teams - unofficial
     "com.github.IsmaelMartinez.teams_for_linux"

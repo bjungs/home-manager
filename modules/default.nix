@@ -1,8 +1,8 @@
 {
 	imports = [
 	  ./pkgs.nix
+		./rust.nix
 	  ./kanata
-		./podman.nix
 		./git.nix
 		./bash.nix
 		./fish.nix

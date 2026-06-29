@@ -29,12 +29,21 @@
     sessionVariables = {
       EDITOR = "zeditor";
       TERMINAL = "alacritty";
+      hm = "$HOME/.config/home-manager";
+      HM = "$HOME/.config/home-manager";
+    };
+
+    shellAliases = {
+      ll = "ls -lAh";
+      py = "python";
+      hm = "home-manager";
+      edit = "$EDITOR";
     };
 
     packages = with pkgs; [
       # adds an executable to PATH to open home-manager repo in $EDITOR
       (writeShellScriptBin "hmedit" ''
-        exec $EDITOR "$HOME/.config/home-manager"
+        exec $EDITOR "$HM"
       '')
     ];
 
