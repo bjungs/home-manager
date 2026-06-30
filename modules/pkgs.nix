@@ -24,7 +24,9 @@
     nodejs_24 # lts
     devbox
 
+    # dev tools
     kubectl
+    azure-cli
   ];
 
   services.flatpak.packages = [
