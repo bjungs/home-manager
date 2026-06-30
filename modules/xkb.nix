@@ -1,10 +1,9 @@
 {
-  # configure custom xkb layout
+  # custom xkb layout
   xdg.configFile."xkb/symbols/br" = {
     text = ''
       default partial alphanumeric_keys
 
-      // We explicitly name our variant 'br-custom' inside the default 'br' file
       xkb_symbols "br-custom" {
           // base layout
           include "br(abnt2)"
@@ -12,6 +11,7 @@
 
           // key overrides
           key <AD03> { [ e, E, bar, degree ] };
+          key <AD04> { [ r, R, backslash, registered ] };
       };
     '';
   };
