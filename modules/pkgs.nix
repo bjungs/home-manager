@@ -15,7 +15,6 @@
     # (pkgs.writeShellScriptBin "my-hello" ''
     #   echo "Hello, ${config.home.username}!"
     # '')
-
     micro
     bat
     chezmoi

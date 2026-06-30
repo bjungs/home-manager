@@ -1,6 +1,8 @@
 {
 	imports = [
+	  ./xkb.nix
 	  ./pkgs.nix
+		./flatpak.nix
 		./rust.nix
 	  ./kanata
 		./git.nix
@@ -9,7 +11,6 @@
 		./alacritty.nix
 		./direnv.nix
 		./zed.nix
-		./flatpak.nix
-		./xkb.nix
+		./wl-clipboard.nix
 	];
 }
