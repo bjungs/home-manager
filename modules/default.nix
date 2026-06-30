@@ -11,6 +11,6 @@
 		./alacritty.nix
 		./direnv.nix
 		./zed.nix
-		./wl-clipboard.nix
+		./clipboard.nix
 	];
 }
