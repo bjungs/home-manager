@@ -12,8 +12,8 @@
 
 			keyboard = {
         bindings = [
-          { key = "PageUp";   action = "ScrollLineUp";   }
-          { key = "PageDown"; action = "ScrollLineDown"; }
+          { key = "Up"; mods = "Control"; action = "ScrollLineUp";   }
+          { key = "Down"; mods = "Control"; action = "ScrollLineDown"; }
           { key = "b"; mods = "Control"; action = "Open"; }
         ];
       };
