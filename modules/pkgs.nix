@@ -27,6 +27,8 @@
     # dev tools
     kubectl
     azure-cli
+
+    lazydocker
   ];
 
   services.flatpak.packages = [
