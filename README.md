@@ -53,7 +53,7 @@ sudo usermod -aG uinput $USER
 
 # verify the changes
 # (at this point we might need to start a new terminal session for it to take place)
-groups 
+groups
 
 # make sure the uinput kernel module is loaded
 sudo modprobe uinput

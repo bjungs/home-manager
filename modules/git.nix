@@ -1,36 +1,36 @@
 {
-	programs.git = {
-		enable = true;
+  programs.git = {
+    enable = true;
 
-		settings = {
+    settings = {
       user = {
-        name  = "bjungs";
+        name = "bjungs";
         email = "nunes.bjc@gmail.com";
       };
 
       init.defaultBranch = "master";
 
-  		alias = {
- 		  	st = "status";
- 		  	co = "checkout";
- 		  	br = "branch";
- 		  	unstage = "reset HEAD --";
- 		  	fp = "fetch --prune";
+      alias = {
+        st = "status";
+        co = "checkout";
+        br = "branch";
+        unstage = "reset HEAD --";
+        fp = "fetch --prune";
         hist = "log --graph --date-order --date=short --pretty=format:'%C(auto)%h%d %C(green)%cd %C(reset)%s %C(bold blue)%cn %C(green)(%cr)'";
-  		};
+      };
 
       push = {
-				autoSetupRemote = true;
-			};
+        autoSetupRemote = true;
+      };
 
-			pull = {
-				rebase = true;
-			};
+      pull = {
+        rebase = true;
+      };
 
-			core = {
-				editor = "micro";
-				autocrlf = "input";
-			};
-		};
-	};
+      core = {
+        editor = "micro";
+        autocrlf = "input";
+      };
+    };
+  };
 }

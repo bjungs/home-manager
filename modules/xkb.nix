@@ -27,6 +27,6 @@
   };
 
   home.keyboard = {
-   	layout = "br";
+    layout = "br";
   };
 }

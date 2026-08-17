@@ -1,22 +1,22 @@
 { pkgs, ... }:
 {
-	programs.alacritty = {
-		enable = true;
+  programs.alacritty = {
+    enable = true;
 
-		settings = {
-			terminal = {
-				shell = {
-					program = "${pkgs.fish}/bin/fish";
-				};
-			};
+    settings = {
+      terminal = {
+        shell = {
+          program = "${pkgs.fish}/bin/fish";
+        };
+      };
 
-			keyboard = {
+      keyboard = {
         bindings = [
           { key = "Up"; mods = "Control"; action = "ScrollLineUp";   }
           { key = "Down"; mods = "Control"; action = "ScrollLineDown"; }
           { key = "b"; mods = "Control"; action = "Open"; }
         ];
       };
-		};
-	};
+    };
+  };
 }
