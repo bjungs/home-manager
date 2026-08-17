@@ -16,6 +16,7 @@
     #   echo "Hello, ${config.home.username}!"
     # '')
     htop
+    lm_sensors # hw sensor data
     micro
     bat
     chezmoi
