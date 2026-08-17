@@ -2,6 +2,7 @@
 	imports = [
 	  ./xkb.nix
 	  ./pkgs.nix
+		./fonts.nix
 		./flatpak.nix
 		./rust.nix
 	  ./kanata
