@@ -15,7 +15,7 @@
     # (pkgs.writeShellScriptBin "my-hello" ''
     #   echo "Hello, ${config.home.username}!"
     # '')
-    htop
+    btop
     lm_sensors # hw sensor data
     micro
     bat
