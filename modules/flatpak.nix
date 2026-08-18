@@ -5,7 +5,7 @@
     enable = true;
     update.onActivation = false;
     update.auto = {
-      enable = false;
+      enable = true;
       onCalendar = "daily";
     };
   };
