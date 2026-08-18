@@ -28,6 +28,7 @@
     # dev tools
     kubectl
     azure-cli
+    github-copilot-cli
 
     lazydocker
   ];
