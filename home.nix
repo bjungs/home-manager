@@ -31,6 +31,9 @@
       TERMINAL = "alacritty";
       hm = "$HOME/.config/home-manager";
       HM = "$HOME/.config/home-manager";
+
+      # allow use of unfree packages when using nix cli
+      NIXPKGS_ALLOW_UNFREE="1";
     };
 
     shellAliases = {
