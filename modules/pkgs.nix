@@ -31,6 +31,8 @@
     github-copilot-cli
 
     lazydocker
+
+    spacetimedb
   ];
 
   services.flatpak.packages = [
