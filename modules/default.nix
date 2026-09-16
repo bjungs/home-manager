@@ -1,17 +1,19 @@
 {
   imports = [
-    ./xkb.nix
     ./pkgs.nix
     ./fonts.nix
-    ./flatpak.nix
-    ./rust.nix
-    ./kanata
-    ./git.nix
     ./bash.nix
     ./fish.nix
-    ./alacritty.nix
-    ./direnv.nix
-    ./zed.nix
     ./clipboard.nix
+    ./flatpak.nix
+    ./xkb.nix
+    ./kanata
+    ./dev.nix
+    ./git.nix
+    ./rust.nix
+    ./direnv.nix
+    ./alacritty.nix
+    ./zed.nix
+    ./tibia.nix
   ];
 }

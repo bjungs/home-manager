@@ -24,15 +24,6 @@
 
     nodejs_24 # lts
     devbox
-
-    # dev tools
-    kubectl
-    azure-cli
-    github-copilot-cli
-
-    lazydocker
-
-    spacetimedb
   ];
 
   services.flatpak.packages = [
@@ -43,7 +34,7 @@
     "com.discordapp.Discord"
     "md.obsidian.Obsidian"
 
-    # ms teams - unofficial
-    "com.github.IsmaelMartinez.teams_for_linux"
+    # ms teams (unofficial)
+    #"com.github.IsmaelMartinez.teams_for_linux"
   ];
 }

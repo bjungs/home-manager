@@ -12,6 +12,7 @@
 
   # service must point to cacerts
   home.packages = [ pkgs.cacert ];
+
   systemd.user.services.flatpak-managed-install = {
     Service = {
       Environment = [
