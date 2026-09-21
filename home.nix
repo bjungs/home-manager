@@ -45,9 +45,15 @@
 
     packages = with pkgs; [
       # adds an executable to PATH to open home-manager repo in $EDITOR
-      (writeShellScriptBin "hmedit" ''
-        exec $EDITOR "$HM"
-      '')
+      (writeShellScriptBin "hm-up" ''
+        cd $HM
+
+        echo -e '\n# nix flake update'
+        nix flake update
+
+        echo -e '\n# home-manager switch'
+        home-manager switch --flake .
+    '')
     ];
 
     # This value determines the Home Manager release that your configuration is
