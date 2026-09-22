@@ -53,7 +53,7 @@
 
         echo -e '\n# home-manager switch'
         home-manager switch --flake .
-    '')
+      '')
     ];
 
     # This value determines the Home Manager release that your configuration is
