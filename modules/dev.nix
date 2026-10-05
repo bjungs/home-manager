@@ -2,7 +2,8 @@
 {
   # dev tools
   home.packages = with pkgs; [
-    kubectl
+    github-cli
+    git-credential-manager
     azure-cli
     github-copilot-cli
     lazydocker

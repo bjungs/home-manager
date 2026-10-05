@@ -22,6 +22,8 @@
     chezmoi
     starship
 
+    pass
+
     nodejs_24 # lts
     devbox
   ];

@@ -34,6 +34,15 @@
         editor = "micro";
         autocrlf = "input";
       };
+
+      http = {
+        "https://github.imec.be".protocol = "https";
+      };
+
+      credential = {
+        helper = "manager";
+        credentialStore = "gpg";
+      };
     };
   };
 }
