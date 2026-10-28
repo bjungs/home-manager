@@ -7,5 +7,10 @@
     azure-cli
     github-copilot-cli
     lazydocker
+
+    (pkgs.callPackage ./conveyor-cli/default.nix {})
+
+    spacetimedb
+    claude-code
   ];
 }
