@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, pkgs-unstable, ... }:
 {
   # dev tools
   home.packages = with pkgs; [
@@ -11,6 +11,6 @@
     (pkgs.callPackage ./conveyor-cli/default.nix {})
 
     spacetimedb
-    claude-code
+    pkgs-unstable.claude-code
   ];
 }
