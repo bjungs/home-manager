@@ -23,6 +23,7 @@
     starship
 
     pass
+    kdePackages.dolphin
 
     nodejs_24 # lts
     devbox
