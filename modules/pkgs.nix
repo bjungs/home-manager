@@ -15,18 +15,16 @@
     # (pkgs.writeShellScriptBin "my-hello" ''
     #   echo "Hello, ${config.home.username}!"
     # '')
-    btop
+    btop # system/resource monitor
     lm_sensors # hw sensor data
-    micro
-    bat
-    chezmoi
-    starship
-
-    pass
-    kdePackages.dolphin
-
-    nodejs_24 # lts
-    devbox
+    micro # simple tui editor
+    bat # cat but better
+    chezmoi # dotfiles manager
+    starship # shell prompt
+    pass # pwd store
+    kdePackages.dolphin # file manager
+    devbox # custom dev/nix environments
+    nodejs_24 # pinned lts
   ];
 
   services.flatpak.packages = [
